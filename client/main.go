@@ -10,13 +10,8 @@ import (
 	"google.golang.org/grpc"
 )
 
-const (
-	address = "localhost:50051"
-	message = "Hello"
-)
-
 func main() {
-	conn, err := grpc.Dial(address, grpc.WithInsecure())
+	conn, err := grpc.Dial("localhost:50051", grpc.WithInsecure())
 	if err != nil {
 		panic(err)
 	}
@@ -25,7 +20,7 @@ func main() {
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
 	defer cancel()
 
-	message := message
+	message := "Hello"
 	if 1 < len(os.Args) {
 		message = os.Args[1]
 	}

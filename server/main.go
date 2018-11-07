@@ -8,12 +8,8 @@ import (
 	"google.golang.org/grpc"
 )
 
-const (
-	port = ":50051"
-)
-
 func main() {
-	listener, err := net.Listen("tcp", port)
+	listener, err := net.Listen("tcp", ":50051")
 	if err != nil {
 		panic(err)
 	}
