@@ -4,7 +4,7 @@ import (
 	"context"
 	"net"
 
-	pb "github.com/yuki-toida/grpc-quick-start/proto"
+	pb "github.com/yuki-toida/grpc-sample/proto"
 	"google.golang.org/grpc"
 )
 
